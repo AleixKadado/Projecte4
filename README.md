@@ -99,3 +99,50 @@ En acabar el projecte, l’alumne haurà lliurat:
 - **Reflexió en clau de sostenibilitat i economia circular**.
 
 Un conjunt de productes que constitueixen una carpeta de treball professional, la millor prova del seu progrés i del seu futur potencial en el món IT.
+
+
+# Tasques del projecte
+
+Tasca 01:[DRP: còpies de seguretat. Estudi cas client (treball cooperatiu)
+](Tasca01/readme.md)
+
+Tasca 02:[DPR: còpies de seguretat. Cas pràctic
+](Tasca02/readme.md)
+
+Tasca 03:[Pla de recuperació davant desastres: imatges del sistema
+)
+](Tasca03/readme.md)
+
+Tasca 04:[ Accés remot](Tasca04/readme.md)
+
+Tasca 05:[ Anàlisi de l’entorn: possibles models de negoci pels clients tecnològics de la consultoria
+](Tasca05/readme.md)
+
+Tasca 06:[ Fonaments del servei DNS
+](Tasca06/readme.md)
+
+Tasca 07:[Instal·lant un servidor de noms ](Tasca07/readme.md)
+
+Tasca 08:[Sitemaps i Estructura d’una pàgina web ](Tasca08/readme.md)
+
+
+P01:[Kanban del projecte ](P01/readme.md)
+
+
+P02:[Repositori de GitHub ](P02/readme.md)
+
+
+P03:[Rèplica web ](P03/readme.md)
+
+
+P04:[Documentació servidor DNS ](P04/readme.md)
+
+
+P05:[Presentació sistemes emmagatzematge ](P05/readme.md)
+
+
+P06:[Vídeo. Fonaments DNS ](P06/readme.md)
+
+
+P07:[ASG a EverPia: informe visual per a inversors
+ ](P07/readme.md)
