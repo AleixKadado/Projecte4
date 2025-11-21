@@ -125,6 +125,21 @@ Tasca 07:[Instal·lant un servidor de noms ](Tasca07/readme.md)
 
 Tasca 08:[Sitemaps i Estructura d’una pàgina web ](Tasca08/readme.md)
 
+Tasca 08:[Sitemaps i Estructura d’una pàgina web ](Tasca08/readme.md)
+
+Tasca 08:[Sitemaps i Estructura d’una pàgina web ](Tasca08/readme.md)
+
+Tasca 08:[Sitemaps i Estructura d’una pàgina web ](Tasca08/readme.md)
+
+Tasca 08:[Sitemaps i Estructura d’una pàgina web ](Tasca08/readme.md)
+
+Tasca 08:[Sitemaps i Estructura d’una pàgina web ](Tasca08/readme.md)
+
+Tasca 08:[Sitemaps i Estructura d’una pàgina web ](Tasca08/readme.md)
+
+Tasca 08:[Sitemaps i Estructura d’una pàgina web ](Tasca08/readme.md)
+
+
 
 P01:[Kanban del projecte ](P01/readme.md)
 
@@ -138,11 +153,4 @@ P03:[Rèplica web ](P03/readme.md)
 P04:[Documentació servidor DNS ](P04/readme.md)
 
 
-P05:[Presentació sistemes emmagatzematge ](P05/readme.md)
 
-
-P06:[Vídeo. Fonaments DNS ](P06/readme.md)
-
-
-P07:[ASG a EverPia: informe visual per a inversors
- ](P07/readme.md)
