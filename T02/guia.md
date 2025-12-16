@@ -223,7 +223,7 @@ sudo duplicity full /home/ file:///media/backup/
 Esborrem els fitxers de prova:
 
 ```bash
-rm arxiu*
+rm arxiu1*
 ```
 
 I restaurar-los:
