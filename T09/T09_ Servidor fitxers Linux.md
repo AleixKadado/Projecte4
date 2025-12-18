@@ -33,77 +33,76 @@ Per mostrar com funcionaria la solució i quines són les seves limitacions, es 
 
 # **T09: Servidor fitxers Linux. NFS (tasca individual)**
 
-# **![][image1]**
+![foto 32](img/1.png)
 
 Aqui instalarem el nfs-kernel, amb la comanda: sudo apt install nfs-kernel-server  
-![][image2]  
+![foto 32](img/2.png)
 aquesta comanda es per crear grups, i crearem el grup de devs i el grup admins
 
-![][image3]  
+![foto 32](img/3.png)
 Aqui crearem els usuaris i els hi afegirem la contraseña.
 
-![][image4]  
+![foto 32](img/4.png)
 Crear el directori per els projectes
 
-![][image5]  
+![foto 32](img/5.png)
 Configurarem els permisos de les carpetes, i chown el fem servir per cambiar la propietat de la carpeta
 
-![][image6]  
+![foto 32](img/6.png)
 assignem els permisos utilitzant chmod 2775
 
-![][image7]  
+![foto 32](img/7.png)
 Comprovacio de que els permisos son correctes
 
-![][image8]  
+![foto 32](img/8.png)
 Ara amb la maquina zorin, crearem els grups i usuaris a la maquina client
 
-![][image9]  
+![foto 32](img/9.png) 
 Comprovacio de que s’han creat els grups i usuaris
 
-![][image10]  
+![foto 32](img/10.png)
 Editar el arxiu /etc/exports per decidir quins archius volem exportar 
 
-![][image11]  
+![foto 32](img/11.png)
 Aplicar els canvis fen sudo systemctl restart kernel
-
-![][image12]  
+![foto 32](img/12.png)
 Ejecutar el comande per veure a quin port esta funcionant, en aquest cas el 2049  
-![][image13]  
+![foto 32](img/13.png)
 Instalar el nfs-common
 
-![][image14]  
+![foto 32](img/14.png)
 Creem la carpeta
 
-![][image15]  
+![foto 32](img/15.png)
 Amb Mount muntem el recurs
 
-![][image16]  
+![foto 32](img/16.png)
 No podrem crear el archiu ja que no tenim els permisos necessaris
 
-![][image17]  
+![foto 32](img/17.png) 
 Si entrem amb admin, si que la podrem crear
 
-![][image18]  
+![foto 32](img/18.png)
 Editar el archiu /etc/exports, i substituirem la linea anterios per la actual, i despues de aixo reiniciem el servei kernel.
 
-![][image19]
+![foto 32](img/19.png)
 
-![][image20]  
+![foto 32](img/20.png)  
 Desmuntarem, i muntarem el recurs 
 
-![][image21]  
+![foto 32](img/21.png)
 Per fer-ho, caldrà editar el fitxer **/etc/exports** i **reemplaçar** la línia  
 «`/srv/nfs/dev_projects *(rw,sync,no_subtree_check)`»
 
-![][image22]  
+![foto 32](img/22.png) 
 Muntem el disc  dev\_projects
 
-![][image23]  
+![foto 32](img/23.png)
 Un cop fet això, si iniciem sessió com a usuari **dev01**, com que disposem d’una adreça IP dins del rang autoritzat per modificar fitxers a la carpeta, **podrem crear-hi fitxers sense problemes**.
 
-![][image24]
+![foto 32](img/24.png)
 
-![][image25]
+![foto 32](img/25.png)
 
 Finalment, iniciarem sessió amb l’usuari **admin01** i intentarem crear un fitxer dins la carpeta **dev\_projects**.
 
@@ -111,13 +110,13 @@ Finalment, iniciarem sessió amb l’usuari **admin01** i intentarem crear un fi
 
 Podem observar que **no és possible crear cap fitxer** dins del directori **dev\_projects**, ja que **no disposem dels permisos necessaris**, atès que l’usuari **admin01 no és membre del grup *devs***.
 
-![][image26]  
+![foto 32](img/26.png)
 Afegim les dos lineas finals
 
-![][image27]  
+![foto 32](img/27.png)
 Reiniciem i confirmem que els discos s’han muntat correctament
 
-[image1]: <data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAk0AAAAdCAYAAAC361iGAAAJQUlEQVR4Xu2cAY4cNwwE40f7l36Mf+BgDShQCt0kNdLs7e3ygIKPzSKlWZ+NARL4n58/f/758ePHn1+/fv39tfr9jMszOMezRs3vuSeDM6yrGWuVsY6I3Ki3y/x5jpoO84pTwfmrZ51yiOqpjLlyVJbhZniW8lSW5aqnMuIcl7seM9Yuy1AzfN6rDvNnOsxVT2XEOTv3qeBmK3nVYc3v6bCviHoZalZlWU/lKiN0WI9M5c53Ofco5wpuT+Usl2e4uX/US9NcP/NSPGu+g7pPFc6wrmbjHkTNqZxkTnVPBu/LvZUzOKv2VKj4zqncedUhqqcy5spRWYab4VnKU1mWq57LCB03G+2gz9plGWqG5111mPN5ZpQfQY81e64f9UafGXPn7OB2VvL5cyV03Lxy2FdEvQw1q7Ksp3KXEfY5E+F8nhGdx2wVNz/nFWcFN/elL03zLHe4D1plFcY+N69yZqwzovNGn5ki2xOh5rhPOaTiVKjscU7lzqsOUT2VqXx8rvx8V3BzfC7lqSzLVY8Za5dFedaLHJVlqBk+71WHuXOcH0GPNXtRf3bosVa5c3ZwOyu5c+i7mfE9HfYVUS9Dzaos66mcGWuVsc5wvssd43NfnRuzzJhXnBXcnH1pGtmdl5pnuYNn018lm1N9ZqyruDmXO9xnEqF87lEOqTgVKnucU7nzqkNUT2Uq5+d6BTfP51KeyrJc9ZixdlmUZ73IUVmGmlHPO9ejz4x7mDvH+RH0WLMX9UnlzhVnB7ezkjuHvpsZ39NhXxH1MtSsyrKeypmxVhnrDOe7vMLqrPPnvOKs4Oa+/KXJzfPsyK0w9lX3Ko+1yli7LMpdT90pg776DOgonONyR8VXTvXOqw5RPZWpfNxxhjMZbobPRU9lapY5ey5jzcy5WY+ZqplVUDNu15zTYa32qz5z5yjGmdmMc1TGfMfZRe11WeU+dFjzezou49xV1G7WlZ7KmalaZdwT4XyV8zzlRLnD+Xeclc31S9PUZ62yylzmZLnrqTtl0FefAR2Fc1zuqPjKqd551SGqpzKVjzvOcCbDzfC56KlMzTJnz2WsmTk36zFTNbMKasbtmnM6rNV+1WfuHMU4M5txjsqY7zi7qL0uq9yHDmt+T8dlnLuK2s260lM5M1WrjHsinK9ynqecKHc4/46zsrnwpUnl40OZ4cwqaofbrbIMNeOy+dzMUf2qQ5f56p4I7uC+6m7epzrHHcwU6pzKnVedUSucr/KKU4X3cDvYd97sMq/uqTh0mXNPxRk1nQw1E53pnPkOvJeacw7rCLdD9Z3LHvsVh/Up3F51F7p0XF+d5Vx3lptbZd7P+9Ej7KsZlUXPxdrBu7g7uZ5znJfBHdzDOssrqLP+e2l6Z9SHprKmuYr7eXJ585rwL8j+/buH6uda9e7iq89vXo+PeGl6ML8x9h+E5g74M9Y/Z69P9vulsuZ59OffvBof89LUNE3TNE2zQ780NU3TNE3TFOiXpqZpmqZpmgJv9dL0yf/9e/fZ3+X/6fhu9z3Bd3tm97O26pzk7vPu3H0347P5zs/QNKf4qJemd/7Dv/NM8yz3sHbZq/DKd5s5ec+TuyJOnlPZVXFO8IxznnHG3bzDMzTNLv3S9CbsPNM8yz2sXfYqvPLdZk7e8+SuiJPnVHZVnBM845xnnHE37/AMTbPLW700RfAPPOtPhp/Fox643Dlfzavdx/Fd7jlz8s6VXRXnBM845xln3M07PEPT7HL8XwRnHeXZnpE5x/lkzuedzsmy6D4rWWVP5HAX81UnYp7lHtYZfHbOs3a52pE57FfhDu6Za+c4fwd3zpxn94meix4z9it7KruqjqP67LPr4HNlvoIzbg/PoTPqXUf1lUOfWRWeo3axT2euI4cZZ+mqmTlzTvOZLL00nXSUpxx6rCu9kc+/0mWtMtYqY60y1ipzd2Tm5kk0W2GePbXH5VcdPqNyotzhfJ7F8yPH+VdQO9x+dR81y5pkMy6r9FYch7onMz4T/eEwi3IHz2W/mlfuWXXYj/KsF+HmVu8znouucip7Kg491s3nceSlyfmV3DnqB5YOcb2Rc79yooy1QjkqI3RYj0zlzj/NOH/nrMqsc+b8lLPDzlkuv4La5X6feGflOFbczI96K45DzbrnVVmlt8LYE+1zPf6esc/8lEOiXkRlzjmrd358r7w7nOYzWXppGrX7gVJ+lM+7uJN1BeePnPuVU8lUns2ojLDPmYhVf4fo3hWyOdeb81NOFT4zn8HtXM2voHbxfldckjn8bCI/6q04DjXr7qQy9quOe3aVEc6rXdmOyOEeB+fUPHMSOeyxT7LzFdEc97uzONc0D5Zfmthjn7XK1VzViXD+yLlfOVk291S/krFWGeuMVX8HnsW6yvgMOc9a5aecCs7fOcvlV1C71Ofq3GymOlvJKr0Vx6Fm3fOpTDHmqz5n518VUe+EM+fOibgyo1CfIWtFxVEu59T5pOI0n8nWS5NynE9HeRUnwvlqL13WLiN0WKuMtcpYZ2S+euYV+Bm63lWi/So/5VRw/s5ZLr+C2vXIXM6MOMflrqeySm/FcajZnc+ErM7Mvpt1+SmncoeIKzMRq/epOMrl3KNmRipO85mEL038wVEOc+WoPfSYsa4Q+VFP9dX5rFWmapWxVtlcZ2S+OmOVsYPQi3D+nCuHZ111otyhfHUWMzcb5VdQu9Rd6FacSq56brfzFRXHoWbdnVSW9VzuoK/uwlrlznG+yysOiXoRbm71Ps5xqM84yzOnaf737zSNH5T5B4Y/OHTYV47aQ4+O263geW4uc9jLHNWnU9mjHNYO3ie61yl29/Ouap/q07visF9F7Zh38fvKWRUngndSd1AzKlM7FJHDHcrjWVedDDXjdqmMfUInw80w5zmqzx3EOcx5DvvOUV4G59UO9umwzlA7VF95KmuaB/3SZPqjjhzVp1PZoxzWDt4nutcpdvfzrmqf6tO74rBfRe2Yd/H7ylkVJ4J3UndQMypTOxSRwx3K41lXnQw143apjH1CJ8PNMOc5qs8dxDnMeQ77zlFeBufVDvbpsM5QO1RfeSprmgcf8y+CN82d9F+wTfM58IVLwZnmPeiXpqY5QP8l2TSfA1+QFJxp3oO/L0391V/91V/91V/91V/9FX/9fWn6/ft30zRN0zRNE/Avv/a/43t1a2AAAAAASUVORK5CYII=>
+![foto 32](img/28.png)<data:image/png;base64,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>
 
 [image2]: <data:image/png;base64,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>
 
